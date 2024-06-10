@@ -48,3 +48,34 @@ let products = JSON.parse( localStorage.getItem('products')) ? JSON.parse( local
 
 //Current year
 document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
+
+//Displays the latest products on your website
+function newProducts(){
+    try{
+        let arrSize = products.length
+        let latestProducts = products.reverse().slice(0, arrSize >> 1)
+        latestProducts.forEach(product => {
+            console.log(product)
+            wrapper.innerHTML += `
+            <div class="card" style="width: 18rem;">
+                <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
+
+                <div class="card-body">
+                    <h5 class="card-title">${product.productName}</h5>
+                    <p class="card-text">${product.description}</p>
+                </div>
+            </div>
+        
+    `
+        })
+
+    } catch (e) {
+        wrapper.textContent = "Please contact our support team"
+        setTimeout(() => {
+            location.reload()
+        },
+            2000
+        )
+    }
+}
+newProducts()
