@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/* Custom variable */
+/* Custom variables */
 :root{
     --primary: #6AD4DD ;
     --secondary: #E3FEF7;
