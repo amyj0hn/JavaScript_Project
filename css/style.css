@@ -1,1 +1,43 @@
-/*  */
+/* Universal styling */
+*,
+*::before
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom variable */
+:root{
+    --primary: #6AD4DD ;
+    --secondary: #E3FEF7;
+    --tertiary: #F1F1F1;
+}
+
+
+/* display -> grid */
+:is(body){
+    display: grid;
+}
+/* Number of rows */
+body{
+    grid-template-rows: auto minmax(100%, 100dvh) auto;
+}
+/* Navbar */
+.navbar{
+    background-color: var(--tertiary);
+}
+
+/* Logo */
+img[alt=logo] {
+    width: 10rem;
+    /* border: 3px solid black; */
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+:is(h2, footer p){
+    text-align: center;
+}
+
