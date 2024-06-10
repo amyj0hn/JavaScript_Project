@@ -45,3 +45,6 @@ let products = JSON.parse( localStorage.getItem('products')) ? JSON.parse( local
      }
     ]
 ))
+
+//Current year
+document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
