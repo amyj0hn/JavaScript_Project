@@ -4,93 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <!-- Favicon image -->
-        <link rel="shortcut icon" href="https://amyj0hn.github.io/project-images/images/purse_sistence_logo.png" type="image/x-icon">
+    <!-- Favicon image -->
+    <link rel="shortcut icon" href="https://amyj0hn.github.io/project-images/images/purse_sistence_logo.png" type="image/x-icon">
 
-        <!-- Bootstrap styling -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-        <!-- aos link -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-        <!-- custom styling -->
-        <link rel="stylesheet" href="../css/style.css">
+    <!-- custom styling -->
+    <link rel="stylesheet" href="../css/style.css">
     
     <title>Store</title>
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid d-flex align-items-center">
-      <a class="navbar-brand" href="../index.html">
-        <img class="img-fluid" src="https://amyj0hn.github.io/project-images/images/purse_sistence_logo.png" alt="logo" loading="lazy">
-    </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-log-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html" target="_blank">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./about.html" target="_blank">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./product.html" target="_blank">Store</a>
-          </li>
-          <a class="nav-link" aria-current="page" href="./checkout.html" target="_blank">Checkout</a>
-          </li>
-          <a class="nav-link" aria-current="page" href="./admin.html" target="_blank">Admin</a>
-          </li>
-          <a class="nav-link" aria-current="page" href="./contact.html" target="_blank">Contact Us</a>
-          </li>
-          </li>
-  
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand" href="../index.html">
+                <img class="img-fluid" src="https://amyj0hn.github.io/project-images/images/purse_sistence_logo.png" alt="logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-log-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html" target="_blank">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html" target="_blank">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./product.html" target="_blank">Store</a>
+                    </li>
+                    <li class="nav-item"> <!-- Added missing opening li tag -->
+                        <a class="nav-link" aria-current="page" href="./checkout.html" target="_blank">Checkout<span
+                          class="badge rounded-pill "
+                          counter>
+                          0
+                      </span></a>
+                    </li>
+                    <li class="nav-item"> <!-- Added missing opening li tag -->
+                        <a class="nav-link" aria-current="page" href="./admin.html" target="_blank">Admin</a>
+                    </li>
+                    <li class="nav-item"> <!-- Added missing opening li tag -->
+                        <a class="nav-link" aria-current="page" href="./contact.html" target="_blank">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container-fluid">
+        <section id="store" class="store py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-10 mx-auto col-sm-6 text-center">
+                <h2 class="tezt-capitalize">Our <strong class="banner-title">Store</strong></h2>
+              </div>
+            </div>
+
+            <div class="row"> <!--Filter buttons-->
+              <div class="col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
+                <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">All</a>
+              
+                <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="cakes">Color</a>
+
+                <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">Style</a>
+
+              </div>
+            </div>
+          </div>
+
+<!-- Search bar -->
+<div class="row">
+  <div class="col-10 mx-auto col-md-6">
+    <form>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text search-box" id="search-icon"><i class="bi bi-search"></i>
+          </span>
+        </div>
+
+        <input type="text"class="form-control" id="search-item" placeholder="Search Item">
       </div>
-    </div>
-  </nav>
-
-<!-- Main Content -->
-<main class="container-fluid">
-  <div class="row">
-      <h2 class="display-2">
-          Store
-      </h2>
+    </form>
   </div>
+        
+        <div class="row gap-2 justify-content-between mx-2" id="ourStore">
 
-  <div class="row justify-content-between my-2 d-block d-md-flex p-2 ">
-    <div class="col">
-        <input class="form-control" type="text" placeholder="Search products:" productSearch>
-    </div>
-    <div class="col">
-        <button class="btn" sorting>Sorting</button>
-    </div>
-</div>
+        </div> 
+    </main>
 
-<div class="row gap-2 justify-content-between mx-2" ourStore></div>
-</main>
+    <!-- Footer Content -->
+    <footer class="container-fluid">
+        <div class="row">
+            <p class="lead">Pur-sistence &copy;
+                <span id="currentYear"></span> <!-- Changed attribute to id -->
+            </p>
+        </div>
+    </footer>
 
-<!-- Footer Content -->
-<footer class="container-fluid">
-  <div class="row">
-      <p class="lead">Pur-sistence &copy;
-          <span currentYear ></span>
-      </p>
+    <!-- Bootstrap's script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  </div>
-</footer>
+    <!-- Custom script -->
+    <script src="../script/product.js"></script>
 
-        <!-- Bootstrap's script -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS script(animation) -->
+    <script>
+        // AOS.init();
+    </script>
 
-        <!-- Custom script -->
-        <script src="../script/code.js"></script>
-
-        <!-- AOS script(animation) -->
-        <script>
-            AOS.init();
-        </script>
 </body>
 </html>

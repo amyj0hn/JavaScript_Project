@@ -42,7 +42,69 @@ let products = JSON.parse( localStorage.getItem('products')) ? JSON.parse( local
             amount: 120,
             img_url: "https://amyj0hn.github.io/project-images/images/blackpurse.jpg"
 
-     }
+     },
+
+     {
+        id:6,
+        productName:"Candy Shoulder Bag",
+        category:"Crossbags",
+        description:"Candy colored shoulder bag will have you `popping!`",
+        amount:"120",
+        img_url:"https://amyj0hn.github.io/project-images/images/candy-color-sholder-bag.png"
+
+    },
+
+    {
+        id:7,
+        productName:"Shoulder Bag with Purse",
+        category:"Crossbags",
+        description:"This cute bag comes with a matching purse",
+        amount:"120",
+        img_url:"https://amyj0hn.github.io/project-images/images/sholder-bag-with-purse.jpg"
+
+    },
+
+    {
+        id:8,
+        productName:"Snakeskin Slingbag",
+        category:"Crossbags",
+        description:"Feeling expensive? try our new snakeskin slingbag",
+        amount:"120",
+        img_url:"https://amyj0hn.github.io/project-images/images/snake-skin-slingbag.webp"
+
+    },
+
+    {
+        id:9,
+        productName:"Leather Slingbag",
+        category:"Crossbags",
+        description:"A leather slingbag, perfect for everyday use",
+        amount:"120",
+        img_url:"https://amyj0hn.github.io/project-images/images/Telena-Leather-Sling-Bag.webp"
+
+    },
+
+    {
+        id:10,
+        productName:"Two-toned purse",
+        category:"Crossbags",
+        description:"Stylish two-toned purse, suitable for any occassion",
+        amount:"120",
+        img_url:"https://amyj0hn.github.io/project-images/images/two-toned-purse.webp"
+
+    },
+
+    {
+        id:11,
+        productName:"Rhinestone Handle bag",
+        category:"Crossbags",
+        description:"Luxurious pink bag with rhinestone handle",
+        amount:"120",
+        img_url:"https://amyj0hn.github.io/project-images/images/rhinestone-handle-bag.webp"
+
+    }
+
+     
     ]
 ))
 
@@ -57,14 +119,17 @@ function newProducts(){
         latestProducts.forEach(product => {
             console.log(product)
             wrapper.innerHTML += `
-            <div class="card" style="width: 18rem;">
-                <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
-
-                <div class="card-body">
-                    <h5 class="card-title">${product.productName}</h5>
-                    <p class="card-text">${product.description}</p>
-                </div>
+      <div class="row" products>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="${product.img_url}" class="card-img-top" alt="${product.productName}">
+            <div class="card-body">
+              <h5 class="card-title">${product.productName}</h5>
+              <p class="card-text">${product.description}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
+          </div>
+        </div>
         
     `
         })
