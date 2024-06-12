@@ -2,7 +2,7 @@
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 let container = document.querySelector('#ourStore')
-let productSearch = document.querySelector('[searchProduct]')
+let productSearch = document.querySelector('#search-item')
 let sortingByAmount = document.querySelector('[sorting]')
 let products = JSON.parse(
     localStorage.getItem('products'))
@@ -13,7 +13,6 @@ let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
     : []
 
 //Products
-
 function showProducts(args) {
     container.innerHTML = ""
     try {
@@ -92,14 +91,14 @@ window.onload = () => {
 })()
 
 (function () {
-    let searchBox = document.querySelector('#searchProduct') // Corrected the selector
+    let searchBox = document.querySelector('#search-item') 
     let storeItems = document.querySelectorAll('#store-item')
 
     searchBox.addEventListener('keyup', (e) => {
         const searchFilter = e.target.value.toLowerCase().trim()
 
         storeItems.forEach((item) => {
-            if (item.textContent.toLowerCase().includes(searchFilter)) { // Changed to lowercase before comparison
+            if (item.textContent.toLowerCase().includes(searchFilter)) {
                 item.style.display = 'block'
             } else {
                 item.style.display = 'none'
