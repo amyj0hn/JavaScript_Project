@@ -180,3 +180,23 @@ footer{
     margin-top: auto;
     background: var(--tertiary);
 }
+
+/* Contact Us Styling */
+.contact-right img{
+    width: 500px;
+}
+
+/* Media queries */
+@media screen {
+    .contact-inputs{
+        width: 800dvh;
+    }
+
+}
+
+@media (min-width:900dvh){
+    .contact-right{
+        width: 300px;
+    }
+}
+

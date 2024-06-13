@@ -59,11 +59,34 @@
 <!-- Main Content -->
 <main class="container-fluid">
   <div class="row">
-      <h2 class="display-2">
-          Contact
-      </h2>
+    <h2 class="display-2">
+        Contact
+    </h2>
+    <form action="https://api.web3forms.com/submit" method="POST" class="col contact-left">
+        <div class="mb-3">
+            <input type="hidden" name="access_key" value="bf2b82a4-3627-4108-acdf-6b3161aca3d7">
+            <label for="InputName" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="InputName" class="contact-container-inputs" required>
+        </div>
 
-  </div>
+        <div class="mb-3">
+            <label for="InputEmail" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="InputEmail" id="emailError" placeholder="name@example.com" class="contact-container-inputs" required onchange="validateEmail()">
+          </div>
+
+        <div class="mb-3">
+            <label for="InputMessage" class="form-label">Message</label>
+            <textarea class="form-control" name="message" id="InputMessage" rows="3" class="contact-container-inputs" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-black">Submit</button>
+    </form>
+
+    <div class="col contact-right">
+        <img src="https://amyj0hn.github.io/project-images/images/purse_sistence_logo.png" alt="">
+    </div>
+</div>
+
 </main>
 
 <!-- Footer Content -->
@@ -84,6 +107,20 @@
 
 //Current year
 document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
+
+// Validation of email
+function validateEmail() {
+        let email = document.getElementById("InputEmail").value;
+        let emailError = document.getElementById("emailError");
+
+        if (!email.includes("@")) {
+            emailError.style.display = "block";
+            return false; // Does not allow submission
+        } else {
+            emailError.style.display = "none";
+            return true; // Allows submission
+        }
+    }
         </script>
 
         <!-- AOS script(animation) -->
