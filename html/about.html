@@ -60,7 +60,12 @@
           About
       </h2>
 
-  </div>
+
+
+
+    </div>
+  </tbody>
+  </table>
 </main>
 
 <!-- Footer Content -->
@@ -87,6 +92,10 @@
   //Current year
   document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
 
+  let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
+    ? JSON.parse(localStorage.getItem('checkout'))
+    : []
+    document.querySelector('[counter]').textContent = checkoutItems.length || 0
 </script>
 
         <!-- AOS script(animation) -->

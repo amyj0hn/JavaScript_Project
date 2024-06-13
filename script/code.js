@@ -144,3 +144,8 @@ function newProducts(){
     }
 }
 newProducts()
+
+let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
+    ? JSON.parse(localStorage.getItem('checkout'))
+    : []
+    document.querySelector('[counter]').textContent = checkoutItems.length || 0
