@@ -62,20 +62,96 @@
       <h2 class="display-2">
           Admin
       </h2>
+
+
+       <!-- Add button on admin page -->
+       <div><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal"><i class="bi bi-plus-circle-fill"></i> Add Item </button></div>
+
+<!-- Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form to add new product -->
+        <form>
+          <div class="mb-3">
+            <label for="productName" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="productName" required>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" required>
+          </div>
+          <div class="mb-3">
+            <label for="img_url" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="img_url" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Edit Modal -->
+ <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form">
+                        <div class="mb-3">
+                          <label for="editProductName" class="form-label">Product Name</label>
+                          <input type="text" class="form-control" id="editProductName" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="editDescription" class="form-label">Description</label>
+                          <textarea class="form-control" id="editDescription" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label for="editAmount" class="form-label">Amount</label>
+                          <input type="number" class="form-control" id="editAmount" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="editImgUrl" class="form-label">Image URL</label>
+                          <input type="text" class="form-control" id="editImgUrl" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+</div>
+
 <div class="table-responsive">
   <table class="table">
     <thead>
       <tr>
         <th>Item</th>
         <th>ProductName</th>
+        <th>Description</th>
         <th>Price</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
     </thead>
     <tbody table>
+      
     </tbody>
   </table>
+
+  
 </div>
       
 </main>
